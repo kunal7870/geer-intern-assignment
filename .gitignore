@@ -1,16 +1,7 @@
 
 # dependencies
 node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
 
-# testing
-/coverage
 
 # next.js
 /.next/
@@ -19,22 +10,54 @@ node_modules
 # production
 /build
 
-# misc
-.DS_Store
-*.pem
-
-# debug
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
 
-# vercel
+
 .vercel
+node_modules/
+.env
+.env.local
+.env.*.local
+*.log
+logs/
+pids/
+*.pid
+*.seed
+*.seed.js
+*.pid.lock
+tmp/
+dist/
+build/
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+frontend/.next/
+frontend/node_modules/
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+frontend/out/
+frontend/.DS_Store
+frontend/coverage/
+frontend/.turbo/
+frontend/.eslintcache
+frontend/.vercel/
+frontend/.vscode/
+
+
+# Lock files (choose one, keep only what's used)
+package-lock.json
+
+.vscode/
+
+
+# Git files
+.git/
+.gitignore
+
+# Lint / build / cache files
+.eslintcache
+.nyc_output
+.cache/
+.parcel-cache/
+.next/
+out/
