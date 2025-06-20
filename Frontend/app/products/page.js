@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export default function ProductsPage() {
   const [products, setProducts] = useState([]);
@@ -40,9 +41,9 @@ export default function ProductsPage() {
         ) : (
           <div className="flex flex-wrap gap-6 justify-center">
             {filtered.map(product => (
+              <Link href={`/products/${product.id}`} className="bg-white p-4 rounded-sm shadow w-full sm:w-[48%] md:w-[30%] flex flex-col items-center">
               <div
                 key={product.id}
-                className="bg-white p-4 rounded-sm shadow w-full sm:w-[48%] md:w-[30%] flex flex-col items-center"
               >
                 <img
                   src={product.imageUrl}
@@ -52,6 +53,7 @@ export default function ProductsPage() {
                 <h2 className="text-lg font-semibold text-center">{product.name}</h2>
                 <p className="text-green-700 font-medium text-center">₹ {product.price}</p>
               </div>
+              </Link>
             ))}
           </div>
         )}
